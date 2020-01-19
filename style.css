@@ -1,3 +1,45 @@
 * {
-    background: black;
+  
 }
+
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url(fonts/LibreBaskerville-Regular.otf);
+}
+
+.info {
+    font-family: Libre Baskerville;
+}
+
+body {
+    margin: 0;
+    background: black;
+    color: white;
+    padding: 0 64px 0 64px;
+}
+
+.section {
+    height: 100vh;
+}
+
+#garden {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(12, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 16px;
+  }
+ 
+
+  #container {
+    grid-area: 2 / 4 / 2 / 10;
+    border: red 1px solid;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+  }
+
+  #project {
+    border: yellow 1px solid;
+    height: 61.8vh;
+  }
