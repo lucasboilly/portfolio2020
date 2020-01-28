@@ -2,20 +2,24 @@
     margin: 0;
     padding: 0;
 }
+
 @font-face {
     font-family: 'Libre Baskerville';
     font-weight: normal;
     src: url(fonts/LibreBaskerville-Regular.otf);
 }
+
 @font-face {
     font-family: 'Libre Baskerville';
     font-weight: bold;
     src: url(fonts/LibreBaskerville-Bold.otf);
 }
+
 @font-face {
     font-family: 'Monument Extended';
     src: url(fonts/MonumentExtended-Regular.otf);
 }
+
 body {
     background: black;
     color: white;
@@ -27,41 +31,50 @@ body {
 
 
 header {
-    position: fixed;/*
+    position: fixed;
+    /*
     width: 100%;
     display: flex;
     justify-content: space-between;
     background: red;*/
 }
-.info1, .info2 {
+
+.info1,
+.info2 {
     font-family: Libre Baskerville;
 }
+
 .info1 {
     font-weight: bold;
 }
+
 #grid {
     display: grid;
     height: 100vh;
     grid-template-rows: 1fr auto 1fr;
-    grid-template-columns: repeat(12, 1fr) ;
+    grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 16px;
     padding: 0 64px;
 }
+
 #container {
     grid-area: 2 / 4 / 2 / 10;
 }
+
 #project {
     position: relative;
     margin: 32px 0;
 }
+
 .illustration {
     width: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(image.jpg);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     padding-bottom: 56.25%;
 }
+
 .infos {
     position: absolute;
     top: 50%;
@@ -72,19 +85,8 @@ header {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
 }
-.project-title2 {
-    font-family: Monument Extended;
-    font-size: 4em;
-    margin: 0;
-    padding: 0;
-}
-.project-subtitle {
-    margin: 0;
-    padding: 0;
-    font-size: 1.2em;
-    font-family: Manrope;
-    font-weight: bold;
-}
+
+
 .cta {
     font-family: Manrope;
     margin-top: 32px;
@@ -92,41 +94,68 @@ header {
     background: #423EFA;
     padding: 16px 32px;
     text-decoration: none;
-    display: inline-block;  
+    display: inline-block;
     font-weight: bold;
 }
-  .numeros {
-      display: flex;
-      justify-content: space-between;
-  }
 
-  .prog {
-      border-top: 1px solid white;
-      width: 100%;
-      margin: 4px;
-      padding-top: 4px;
-      font-family: Manrope;
-  }
+.numeros {
+    display: flex;
+    justify-content: space-between;
+}
 
-  .hide {
-      visibility: hidden;
-  }
+.prog {
+    border-top: 1px solid white;
+    width: 100%;
+    margin: 4px;
+    padding-top: 4px;
+    font-family: Manrope;
+}
 
-  
-    .project-title2 {
-        position: relative;
-    }
-  .project-title2 .text-wrapper {
+.hide {
+    visibility: hidden;
+}
+
+.project-title {
+    position: relative;
+    font-family: Monument Extended;
+    font-size: 52px;
+    margin: 0;
+    padding: 0;
+}
+
+.project-title .text-wrapper {
     position: relative;
     display: inline-block;
+    /*
     padding-top: 0.2em;
     padding-right: 0.05em;
-    padding-bottom: 0.1em;
+    padding-bottom: 0.1em;*/
     overflow: hidden;
-  }
-  .project-title2 .letter {
+}
+
+.project-title .letter {
     transform-origin: 0 100%;
     display: inline-block;
-    line-height: 1em;
-  }
-  
+    line-height: 52px;
+}
+
+
+.project-subtitle {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-family: Libre Baskerville;
+}
+
+.project-subtitle .text-wrapper {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.project-subtitle .letter {
+    transform-origin: 0 100%;
+    display: inline-block;
+    line-height: 24px;
+}
