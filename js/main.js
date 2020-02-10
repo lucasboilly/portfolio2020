@@ -7,7 +7,8 @@ new fullpage('#fullpage', {
 	autoScrolling: true,
     scrollHorizontally: true,
     easing: 'easeInOutCubic',
-    touchSensitivity: 1
+    touchSensitivity: 1,
+    continuousVertical: true,
 });
 
 // Permet de règler le bug de la section 1 sur firefox

@@ -3,18 +3,18 @@
     padding: 0;
 }
 
+
 /* FONTS */
 
 @font-face {
     font-family: 'Libre Baskerville';
     font-weight: normal;
-    src: url(fonts/LibreBaskerville-Regular.otf);
+    src: url(../fonts/LibreBaskerville-Regular.otf);
 }
 @font-face {
     font-family: 'Monument Extended';
-    src: url(fonts/MonumentExtended-Regular.otf);
+    src: url(../fonts/MonumentExtended-Regular.otf);
 }
-
 
 body {
     background: black;
@@ -26,6 +26,7 @@ body {
 header {
     background: linear-gradient(black, rgba(0, 0, 0, 0));
 }
+
 footer {
     background: linear-gradient( rgba(0, 0, 0, 0), black);
     bottom: 0;
@@ -71,6 +72,13 @@ footer {
     overflow: hidden;
 }
 
+.project-title .letter,
+.project-subtitle .letter {
+    transform-origin: 0 100%;
+    display: inline-block;
+    line-height: auto;
+}
+
 
     .links a {
         display: inline-block;
@@ -112,7 +120,7 @@ footer {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-column-gap: 16px;
-        height: 21vh;
+        height: 128px;
         z-index: 5;
     }
     #grid {
@@ -138,7 +146,7 @@ footer {
         grid-area: 2 / 4 / 2 / 10;
     }
     .illustration {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(image.jpg);
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/image.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         width: 100%;
@@ -184,12 +192,6 @@ footer {
         font-family: Libre Baskerville;
         font-size: 24px;
     }
-    .project-title .letter,
-    .project-subtitle .letter {
-        transform-origin: 0 100%;
-        display: inline-block;
-        line-height: auto;
-    }
 
     
 }
@@ -232,7 +234,7 @@ footer {
         grid-area: 2 / 1 / 2 / 5;
     }
     .illustration {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(image.jpg);
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../img/image.jpg);
         background-size: cover;
         background-position: right;
         background-repeat: no-repeat;
@@ -247,12 +249,6 @@ footer {
     .project-subtitle {
         font-family: Libre Baskerville;
         font-size: 16px;
-    }
-    .project-title .letter,
-    .project-subtitle .letter {
-        transform-origin: 0 100%;
-        display: inline-block;
-        line-height: auto;
     }
 
 }
