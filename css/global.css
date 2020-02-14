@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'Libre Baskerville';
+    font-weight: normal;
+    src: url(../fonts/LibreBaskerville-Regular.otf);
+}
+@font-face {
+    font-family: 'Monument Extended';
+    src: url(../fonts/MonumentExtended-Regular.otf);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: black;
+    color: white;
+}
+header, footer {
+    position: fixed;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 16px;
+    height: 128px;
+    z-index: 5;
+}
+header {
+    background: linear-gradient(black, rgba(0, 0, 0, 0));
+}
+footer {
+    background: linear-gradient( rgba(0, 0, 0, 0), black);
+    bottom: 0;
+}
+.headerContent {
+    grid-area: 1 / 2 / 2 / 12;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 64px;
+}
+.links p:nth-child(2),
+.links p:nth-child(3) {
+    margin-left: 32px;
+}
+.links {
+    display: flex;
+    font-family: Manrope;
+    text-decoration: none;
+}
+.links a {
+    color: white;
+    text-decoration: none;
+} 
+.links a {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 4px;
+}
+.links a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    background: white;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    -ms-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+.links a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}

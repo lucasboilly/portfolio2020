@@ -1,69 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-
-/* FONTS */
-
-@font-face {
-    font-family: 'Libre Baskerville';
-    font-weight: normal;
-    src: url(../fonts/LibreBaskerville-Regular.otf);
-}
-@font-face {
-    font-family: 'Monument Extended';
-    src: url(../fonts/MonumentExtended-Regular.otf);
-}
-
-body {
-    background: black;
-    color: white;
-}
-#fullpage {
-    width: 100%;
-}
-header {
-    background: linear-gradient(black, rgba(0, 0, 0, 0));
-}
-
-footer {
-    background: linear-gradient( rgba(0, 0, 0, 0), black);
-    bottom: 0;
-}
-.info1,
-.info2 {
-    font-family: Libre Baskerville;
-}
-.info1 {
-    font-weight: bold;
-}
-.links {
-    display: flex;
-    font-family: Libre Baskerville;
-    text-decoration: none;
-    color: white;
-}
-.links a {
-    color: white;
-    text-decoration: none;
-    display: block;
-}
-.links p:nth-child(2),
-.links p:nth-child(3) {
-    margin-left: 32px;
-    color: white;
-}
-#project {
+#project, .project-title, .project-subtitle {
     position: relative;
-}
-.project-title,
-.project-subtitle {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    pointer-events: none;
-    pointer-events: none;
 }
 .project-title .text-wrapper,
 .project-subtitle .text-wrapper {
@@ -71,7 +7,6 @@ footer {
     display: inline-block;
     overflow: hidden;
 }
-
 .project-title .letter,
 .project-subtitle .letter {
     transform-origin: 0 100%;
@@ -79,68 +14,16 @@ footer {
     line-height: auto;
 }
 
-
-    .links a {
-        display: inline-block;
-        position: relative;
-        padding-bottom: 4px;
-    }
-    .links a:after {
-        background: none repeat scroll 0 0 transparent;
-        bottom: 0;
-        content: "";
-        display: block;
-        height: 1px;
-        left: 0;
-        position: absolute;
-        background: white;
-        transition: width 0.3s ease 0s, left 0.3s ease 0s;
-        width: 0;
-        -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-        -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-        -ms-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-        -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-}
-    .links a:hover:after { 
-        width: 100%; 
-        left: 0; 
-    }
-
-
-
-
 @media only screen and (min-width: 377px) {
 
     /* DESKTOP */
 
-    header,
-    footer {
-        position: fixed;
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-column-gap: 16px;
-        height: 128px;
-        z-index: 5;
-    }
     #grid {
         display: grid;
         height: 100vh;
         grid-template-rows: 1fr auto 1fr;
         grid-template-columns: repeat(12, 1fr);
         grid-column-gap: 16px;
-    }
-    .mm {
-        grid-area: 1 / 2 / 2 / 12;
-        /*background: rgba(0, 0, 255, 0.5);*/
-        display: flex;
-        justify-content: space-between;
-        margin-top: 64px;
-    }
-    .ll {
-        grid-area: 2 / 4 / 2 / 10;
-        background: rgba(0, 0, 255, 0.5);
-        margin-top: 64px;
     }
     #container {
         grid-area: 2 / 4 / 2 / 10;

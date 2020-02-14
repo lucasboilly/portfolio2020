@@ -1,5 +1,5 @@
 inView.offset(1);
-
+/*
 var textWrapper = document.querySelector('.title .letters');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 anime.timeline({loop: false}).add({ 
@@ -35,4 +35,4 @@ function animate() {
     });
 }
 
-inView('#article1').once('enter', animate);
+inView('#article1').once('enter', animate);*/

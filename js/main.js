@@ -27,6 +27,7 @@ function animateSection1() {
         targets: illustration,
         scale: [0, 1],
         duration: 2000,
+        opacity: [0, 1],
         easing: easing
     });
 
@@ -67,6 +68,7 @@ function animateSection2() {
         targets: illustration,
         scale: [0, 1],
         duration: 2000, 
+        opacity: [0, 1],
         easing: easing
     });
 
@@ -107,6 +109,7 @@ function animateSection3() {
         targets: illustration,
         scale: [0, 1],
         duration: 2000, 
+        opacity: [0, 1],
         easing: easing
     });
 
@@ -148,6 +151,7 @@ function animateSection4() {
         targets: illustration,
         scale: [0, 1],
         duration: 2000, 
+        opacity: [0, 1],
         easing: easing
     });
 
