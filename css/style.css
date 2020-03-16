@@ -13,6 +13,9 @@
     display: inline-block;
     line-height: auto;
 }
+.project-title .text-wrapper {
+    padding-top: 16px;
+}
 
 @media only screen and (min-width: 377px) {
 
@@ -30,6 +33,20 @@
     }
     .illustration {
         background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/image.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        padding-bottom: 56.25%;
+    }
+    #illustration2 {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/miiam1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        padding-bottom: 56.25%;
+    }
+    #illustration4 {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/browsers1.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         width: 100%;
@@ -72,7 +89,7 @@
         font-size: 52px;
     }
     .project-subtitle {
-        font-family: Libre Baskerville;
+        font-family: Manrope Regular;
         font-size: 24px;
     }
 

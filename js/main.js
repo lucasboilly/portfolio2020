@@ -14,6 +14,8 @@ new fullpage('#fullpage', {
 // Permet de règler le bug de la section 1 sur firefox
 inView.offset(1);
 
+
+
 function animateSection1() {
     
     console.log("1");
@@ -36,7 +38,8 @@ function animateSection1() {
     anime.timeline({loop: false}).add({ 
         targets: `${title} .letter`,
         translateY: ["1.1em", 0],
-        duration: 1000, 
+        duration: 1000,
+        opacity: [0, 1],
         easing: easing,
         delay: 1000,
         //delay: (el, i) => 50 * i
@@ -49,6 +52,7 @@ function animateSection1() {
         translateY: ["1.1em", 0],
         duration: 1000, 
         easing: easing,
+        opacity: [0, 1],
         delay: 1200
         //delay: (el, i) => 50 * i
     });
@@ -80,6 +84,7 @@ function animateSection2() {
         duration: 1000, 
         easing: easing,
         delay: 1000,
+        opacity: [0, 1],
         //delay: (el, i) => 50 * i
     });
 
@@ -90,6 +95,7 @@ function animateSection2() {
         translateY: ["1.1em", 0],
         duration: 1000, 
         easing: easing,
+        opacity: [0, 1],
         delay: 1200
         //delay: (el, i) => 50 * i
     });
@@ -119,6 +125,7 @@ function animateSection3() {
         targets: `${title} .letter`,
         translateY: ["1.1em", 0],
         duration: 1000, 
+        opacity: [0, 1],
         easing: easing,
         delay: 1000
     });
@@ -129,6 +136,7 @@ function animateSection3() {
         targets: `${subtitle} .letter`,
         translateY: ["1.1em", 0],
         duration: 1000, 
+        opacity: [0, 1],
         easing: easing,
         delay: 1200
         //delay: (el, i) => 50 * i
@@ -162,6 +170,7 @@ function animateSection4() {
         translateY: ["1.1em", 0],
         duration: 1000, 
         easing: easing,
+        opacity: [0, 1],
         delay: 1000
     });
 
@@ -172,6 +181,7 @@ function animateSection4() {
         translateY: ["1.1em", 0],
         duration: 1000, 
         easing: easing,
+        opacity: [0, 1],
         delay: 1200
         //delay: (el, i) => 50 * i
     });

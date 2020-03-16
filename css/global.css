@@ -1,7 +1,14 @@
 @font-face {
-    font-family: 'Libre Baskerville';
-    font-weight: normal;
-    src: url(../fonts/LibreBaskerville-Regular.otf);
+    font-family: 'Manrope Regular';
+    src: url(../fonts/Manrope-Regular.woff2);
+}
+@font-face {
+    font-family: 'Manrope ExtraBold';
+    src: url(../fonts/Manrope-ExtraBold.woff2);
+}
+@font-face {
+    font-family: 'Manrope ExtraLight';
+    src: url(../fonts/Manrope-ExtraLight.woff2);
 }
 @font-face {
     font-family: 'Monument Extended';
@@ -10,6 +17,10 @@
 * {
     margin: 0;
     padding: 0;
+}
+a {
+    color: white;
+    text-decoration: none;
 }
 body {
     background: black;
@@ -43,19 +54,17 @@ footer {
 }
 .links {
     display: flex;
-    font-family: Manrope;
+    font-family: Manrope Regular;
     text-decoration: none;
 }
-.links a {
-    color: white;
-    text-decoration: none;
-} 
-.links a {
+.links a,
+.backButton a {
     display: inline-block;
     position: relative;
     padding-bottom: 4px;
 }
-.links a:after {
+.links a:after,
+.backButton a:after {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
@@ -71,7 +80,13 @@ footer {
     -ms-transition: width 0.3s ease 0s, left 0.3s ease 0s;
     -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
 }
-.links a:hover:after { 
+.links a:hover:after,
+.backButton a:hover:after { 
     width: 100%; 
     left: 0; 
+}
+.logo {
+    height: 48px;
+    width: 48px;
+    background-image: url(../img/logo.svg);
 }
