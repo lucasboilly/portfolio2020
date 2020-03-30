@@ -100,16 +100,6 @@
     
     /*  MOBILE */
 
-    header,
-    footer {
-        position: fixed;
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-column-gap: 16px;
-        height: 16vh;
-        z-index: 5;
-    }
     #grid {
         display: grid;
         height: 100vh;

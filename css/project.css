@@ -3,22 +3,12 @@
     padding: 0;
     scrollbar-width: none;
 }
-
-#grid {
-    padding: 128px 16px 0 16px;
+#grid,
+.article {
+    display: grid;
+    grid-column-gap: 16px;
 }
-
-.textTitle {
-    font-size: 24px;
-    font-family: Manrope ExtraBold;
-    line-height: 100%;
-}
-.articleTitle {
-    font-family: Manrope ExtraLight;
-    font-size: 24px;
-    opacity: 0.4;
-    line-height: 100%;
-}
+.backButton,
 .subtitle,
 .article {
     font-family: Manrope Regular;
@@ -26,32 +16,14 @@
 .title {
     font-family: Monument Extended;
 }
-.subtitle {
-    font-size: 24px;
-    margin-bottom: 128px;
-}
 .illu {
     width: 100%;
     padding-bottom: 56.25%;
     background-size: cover;
     background-position: center;
 }
-.otherProjects {
-    margin: 64px 0 128px 0;
-    grid-column: 3 / 11;
-    display: flex;
-    flex-direction: column;
-}
-.otherProjects a {
-    margin-bottom: 32px;
-    font-size: 52px;
-    font-family: Monument Extended;
-    opacity: 0.2;
-    display: inline-block;
-}
-.otherProjects a:hover {
-    opacity: 1;
-}
+
+
 #miiam1 {
     background-image: url(../img/miiam1.jpg);
 }
@@ -64,48 +36,47 @@
 #browsers1 {
     background-image: url(../img/Scene-4.jpg);
 }
-
 .textTitle {
-    font-size: 24px;
     font-family: Manrope ExtraBold;
-    line-height: 100%;
 }
-.textContent {
-    opacity: 0.8;
+.articleTitle {
     font-family: Manrope ExtraLight;
-    line-height: 180%;
+    opacity: 0.4;
 }
-.title, .subtitle {
-    grid-column: 3 / 11;
+
+.illu {
+    width: 100%;
+    padding-bottom: 56.25%;
+    background-size: cover;
+    background-position: center;
 }
-.backButton {
-    font-family: Manrope Regular;
+.otherProjects {
+    display: flex;
+    flex-direction: column;
 }
-.backButton a {
-    text-decoration: none;
-    color: white;
+.otherProjects a {
+    font-family: Monument Extended;
+    opacity: 0.2;
+    display: inline-block;
+}
+.otherProjects a:hover {
+    opacity: 1;
 }
 .aze {
-    grid-column: 3 / 11;
     font-family: Manrope Regular;
-    margin-top: 128px;
-    margin-bottom: 32px;
 }
-
 
 @media only screen and (min-width: 377px) {
 
     /* DESKTOP */
 
     #grid {
-        display: grid;
         grid-template-columns: repeat(12, 1fr);
-        grid-column-gap: 16px;
+        padding-top: 128px;
+        
     }
     .article {
-        display: grid;
         grid-template-columns: repeat(8, 1fr);
-        grid-column-gap: 16px;
         grid-column: 3 / 11;
     }
     .articleTitle {
@@ -119,27 +90,53 @@
     }
     .illu {
         grid-column: 1 / 14;
-        /*grid-column: 3 / 11;*/
     }
     .backButton {
         grid-column: 3 / 11;
-        /*border: solid red 1px;*/
         margin-bottom: 128px;
     }
-    .backButton a {
-        text-decoration: none;
-        color: white;
-    }/*
-    .backButton a::before {
-        background-image: url(../img/mdi_arrow_back.svg);
-        background-size: cover;
-        display: inline-block;
-        width: 16px; 
-        height: 16px;
-        content:"";
-        vertical-align: middle;
-        margin-right: 8px;
-    }*/
+    .textTitle {
+        font-size: 24px;
+        line-height: 100%;
+    }
+    .articleTitle {
+        font-size: 24px;
+    }
+    .subtitle {
+        font-size: 24px;
+        margin-bottom: 128px;
+    }
+    
+    .otherProjects {
+        margin: 64px 0 128px 0;
+        grid-column: 3 / 11;
+    }
+    .otherProjects a {
+        margin-bottom: 32px;
+        font-size: 52px;
+    }
+    .otherProjects a:hover {
+        opacity: 1;
+    }
+
+    .textTitle {
+        font-size: 24px;
+        font-family: Manrope ExtraBold;
+        line-height: 100%;
+    }
+    .textContent {
+        opacity: 0.8;
+        font-family: Manrope ExtraLight;
+        line-height: 180%;
+    }
+    .title, .subtitle {
+        grid-column: 3 / 11;
+    }
+    .aze {
+        grid-column: 3 / 11;
+        margin-top: 128px;
+        margin-bottom: 32px;
+    }
     .title,
     .subtitle {
         position: relative;
@@ -156,7 +153,7 @@
         display: inline-block;
         line-height: auto;
     }
-    
+
     .links a {
         display: inline-block;
         position: relative;
@@ -185,15 +182,10 @@
     .otherProjects {
         margin: 64px 0 128px 0;
         grid-column: 3 / 11;
-        display: flex;
-        flex-direction: column;
     }
     .otherProjects a {
         margin-bottom: 32px;
         font-size: 52px;
-        font-family: Monument Extended;
-        opacity: 0.2;
-        display: inline-block;
     }
     .otherProjects a:hover {
         opacity: 1;
@@ -213,63 +205,62 @@
     }
     .illu {
         margin: 256px 0;
-        width: 100%;
-        padding-bottom: 56.25%;
-        background-size: cover;
-        background-position: center;
     }
     .title {
         font-size: 52px;
     }
+    
 }
 
 @media only screen and (max-width: 376px) {
     
     /*  MOBILE */
 
+    #grid {
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0 16px;
+        padding-top: 128px;
+    }
+    .backButton,
+    .title,
+    .subtitle,
+    .article,
+    .articleTitle,
+    .text,
+    .illu,
+    .aze,
     .otherProjects {
-        margin: 64px 0 128px 0;
-        grid-column: 3 / 11;
-        display: flex;
-        flex-direction: column;
-    }
-    .otherProjects a {
-        margin-bottom: 32px;
-        font-size: 32px;
-        font-family: Monument Extended;
-        opacity: 0.2;
-        display: inline-block;
-    }
-    .otherProjects a:hover {
-        opacity: 1;
-    }
-    .backButton {
-        grid-column: 3 / 11;
-        /*border: solid red 1px;*/
-        margin-bottom: 64px;
-    }
-    .backButton a {
-        text-decoration: none;
-        color: white;
-    }
-    .subtitle {
-        font-size: 24px;
-        margin-bottom: 64px;
-    }
-    .articleTitle {
-        font-size: 16px;
-        opacity: 0.4;
-        line-height: 100%;
-        margin-bottom: 16px;
-    }
-    .illu {
-        margin: 64px 0;
-        width: 100%;
-        padding-bottom: 56.25%;
-        background-size: cover;
-        background-position: center;
+        grid-column: 1 / 5;
     }
     .title {
         font-size: 32px;
     }
+    .subtitle,
+    .backButton {
+        margin-bottom: 64px;
+    }
+    .article {
+        grid-template-columns: repeat(1, 5fr);
+    }
+    .articleTitle {
+        font-size: 16px;
+    }
+    .textTitle {
+        font-size: 24px;
+    }
+    .illu {
+        margin: 32px 0 128px 0;
+    }
+    .aze {
+        margin: 64px 0 32px 0;
+    }
+    .otherProjects {
+        margin-bottom: 64px;
+    }
+    .otherProjects a {
+        margin-bottom: 32px;
+        font-size: 32px;
+    }
+    
+
 }
