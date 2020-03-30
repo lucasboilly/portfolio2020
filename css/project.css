@@ -13,12 +13,16 @@
 .article {
     font-family: Manrope Regular;
 }
-.title {
+.title,
+.otherProjects a {
     font-family: Monument Extended;
+}
+.otherProjects a {
+    opacity: 0.2;
+    display: inline-block;
 }
 .illu {
     width: 100%;
-    padding-bottom: 56.25%;
     background-size: cover;
     background-position: center;
 }
@@ -39,26 +43,13 @@
 .textTitle {
     font-family: Manrope ExtraBold;
 }
-.articleTitle {
-    font-family: Manrope ExtraLight;
-    opacity: 0.4;
-}
 
-.illu {
-    width: 100%;
-    padding-bottom: 56.25%;
-    background-size: cover;
-    background-position: center;
-}
+
 .otherProjects {
     display: flex;
     flex-direction: column;
 }
-.otherProjects a {
-    font-family: Monument Extended;
-    opacity: 0.2;
-    display: inline-block;
-}
+
 .otherProjects a:hover {
     opacity: 1;
 }
@@ -90,6 +81,7 @@
     }
     .illu {
         grid-column: 1 / 14;
+        padding-bottom: 56.25%;
     }
     .backButton {
         grid-column: 3 / 11;
@@ -125,8 +117,6 @@
         line-height: 100%;
     }
     .textContent {
-        opacity: 0.8;
-        font-family: Manrope ExtraLight;
         line-height: 180%;
     }
     .title, .subtitle {
@@ -154,31 +144,6 @@
         line-height: auto;
     }
 
-    .links a {
-        display: inline-block;
-        position: relative;
-        padding-bottom: 4px;
-    }
-    .links a:after {
-        background: none repeat scroll 0 0 transparent;
-        bottom: 0;
-        content: "";
-        display: block;
-        height: 1px;
-        left: 0;
-        position: absolute;
-        background: white;
-        transition: width 0.3s ease 0s, left 0.3s ease 0s;
-        width: 0;
-        -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-        -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-        -ms-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-        -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    }
-    .links a:hover:after { 
-        width: 100%; 
-        left: 0; 
-    }
     .otherProjects {
         margin: 64px 0 128px 0;
         grid-column: 3 / 11;
@@ -216,6 +181,10 @@
     
     /*  MOBILE */
 
+    p > a {
+        text-decoration: underline;
+    }
+
     #grid {
         grid-template-columns: repeat(4, 1fr);
         margin: 0 16px;
@@ -244,12 +213,14 @@
     }
     .articleTitle {
         font-size: 16px;
+        opacity: 0.4;
     }
     .textTitle {
         font-size: 24px;
     }
     .illu {
         margin: 32px 0 128px 0;
+        padding-bottom: 100%;
     }
     .aze {
         margin: 64px 0 32px 0;

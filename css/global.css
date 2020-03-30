@@ -104,7 +104,6 @@ header {
 }
 footer {
     background: linear-gradient( rgba(0, 0, 0, 0), black);
-    background: yellow;
     bottom: 0;
 }
 
@@ -154,6 +153,11 @@ header, footer {
         grid-column: 1 / 5;
         margin-bottom: 64px;
         padding: 0 16px;
+    }
+    .otherProjects a,
+    .links a,
+    .backButton a {
+        text-decoration: underline;
     }
     
 

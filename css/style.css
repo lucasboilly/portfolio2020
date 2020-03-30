@@ -1,20 +1,19 @@
-#project, .project-title, .project-subtitle {
-    position: relative;
+#grid {
+    display: grid;
+    grid-column-gap: 16px;
 }
-.project-title .text-wrapper,
-.project-subtitle .text-wrapper {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
+.project-title {
+    font-family: Monument Extended;
 }
-.project-title .letter,
-.project-subtitle .letter {
-    transform-origin: 0 100%;
-    display: inline-block;
-    line-height: auto;
+.project-subtitle {
+    font-family: Manrope Regular;
 }
-.project-title .text-wrapper {
-    padding-top: 16px;
+.illustration {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-bottom: 56.25%;
 }
 
 @media only screen and (min-width: 377px) {
@@ -22,35 +21,12 @@
     /* DESKTOP */
 
     #grid {
-        display: grid;
         height: 100vh;
         grid-template-rows: 1fr auto 1fr;
         grid-template-columns: repeat(12, 1fr);
-        grid-column-gap: 16px;
     }
     #container {
         grid-area: 2 / 4 / 2 / 10;
-    }
-    .illustration {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/image.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 100%;
-        padding-bottom: 56.25%;
-    }
-    #illustration2 {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/miiam1.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 100%;
-        padding-bottom: 56.25%;
-    }
-    #illustration4 {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/browsers1.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 100%;
-        padding-bottom: 56.25%;
     }
     .infos {
         position: absolute;
@@ -62,34 +38,10 @@
         -ms-transform: translateY(-50%);
         -o-transform: translateY(-50%);
     }
-    .cta {
-        font-family: Manrope;
-        margin-top: 32px;
-        color: white;
-        background: #423EFA;
-        padding: 16px 32px;
-        text-decoration: none;
-        display: inline-block;
-        font-weight: bold;
-    }
-    .numeros {
-        display: flex;
-        justify-content: space-between;
-        grid-area: 2 / 4 / 2 / 10;
-    }
-    .prog {
-        border-top: 1px solid white;
-        width: 100%;
-        margin: 4px;
-        padding-top: 4px;
-        font-family: Monument Extended;
-    }
     .project-title {
-        font-family: Monument Extended;
         font-size: 52px;
     }
     .project-subtitle {
-        font-family: Manrope Regular;
         font-size: 24px;
     }
 
@@ -101,43 +53,22 @@
     /*  MOBILE */
 
     #grid {
-        display: grid;
         height: 100vh;
         grid-template-rows: 1fr auto 1fr;
         grid-template-columns: repeat(4, 1fr);
-        grid-column-gap: 16px;
         margin: 0 16px;
-        
-    }
-    .mm {
-        grid-area: 1 / 1 / 2 / 10;
-        display: flex;
-        justify-content: space-between;
-        margin: 32px 16px 0 16px;
-    }
-    .ll {
-        grid-area: 2 / 4 / 2 / 10;
-        background: rgba(0, 0, 255, 0.5);
-        margin-top: 64px;
     }
     #container {
         grid-area: 2 / 1 / 2 / 5;
     }
     .illustration {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../img/image.jpg);
-        background-size: cover;
-        background-position: right;
-        background-repeat: no-repeat;
-        width: 100%;
         padding-bottom: 100%;
     }
     .project-title {
-        font-family: Monument Extended;
         font-size: 24px;
         margin-top: 32px;
     }
     .project-subtitle {
-        font-family: Libre Baskerville;
         font-size: 16px;
     }
 
