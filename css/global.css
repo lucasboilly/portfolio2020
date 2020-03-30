@@ -26,28 +26,6 @@ body {
     background: black;
     color: white;
 }
-header, footer {
-    position: fixed;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 16px;
-    height: 128px;
-    z-index: 5;
-}
-header {
-    background: linear-gradient(black, rgba(0, 0, 0, 0));
-}
-footer {
-    background: linear-gradient( rgba(0, 0, 0, 0), black);
-    bottom: 0;
-}
-.headerContent {
-    grid-area: 1 / 2 / 2 / 12;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 64px;
-}
 .links p:nth-child(2),
 .links p:nth-child(3) {
     margin-left: 32px;
@@ -86,7 +64,88 @@ footer {
     left: 0; 
 }
 .logo {
-    height: 48px;
-    width: 48px;
     background-image: url(../img/logo.svg);
+}
+#project, .project-title, .project-subtitle {
+    position: relative;
+}
+.project-title .text-wrapper,
+.project-subtitle .text-wrapper {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+.project-title .letter,
+.project-subtitle .letter {
+    transform-origin: 0 100%;
+    display: inline-block;
+    line-height: auto;
+}
+.project-title .text-wrapper {
+    padding-top: 16px;
+}
+
+@media only screen and (min-width: 377px) {
+
+    /* DESKTOP */
+
+    .logo {
+        height: 48px;
+        width: 48px;
+    }
+
+    header, footer {
+        position: fixed;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: 16px;
+        height: 128px;
+        z-index: 5;
+    }
+    header {
+        background: linear-gradient(black, rgba(0, 0, 0, 0));
+    }
+    footer {
+        background: linear-gradient( rgba(0, 0, 0, 0), black);
+        bottom: 0;
+    }
+    .headerContent {
+        grid-area: 1 / 2 / 2 / 12;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 64px;
+    }
+
+   
+}
+
+@media only screen and (max-width: 376px) {
+    
+    /*  MOBILE */
+
+    .logo {
+        height: 48px;
+        width: 48px;
+        background-image: url(../img/logo.svg);
+    }
+    header, footer {
+        position: fixed;
+        width: 100%;
+        height: 128px;
+        z-index: 5;
+    }
+    header {
+        background: linear-gradient(black, rgba(0, 0, 0, 0));
+    }
+    footer {
+        background: linear-gradient( rgba(0, 0, 0, 0), black);
+        bottom: 0;
+    }
+    .headerContent {
+        display: flex;
+        justify-content: space-between;
+        margin: 16px 16px 0 16px;
+    }
+
 }

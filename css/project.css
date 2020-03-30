@@ -3,47 +3,27 @@
     padding: 0;
     scrollbar-width: none;
 }
+
 #grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 16px;
-    padding-top: 128px;
+    padding: 128px 16px 0 16px;
 }
-.article {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-column-gap: 16px;
-    grid-column: 3 / 11;
-}
-.articleTitle {
-    grid-column: 1 / 4;
-    font-family: Manrope ExtraLight;
-    font-size: 24px;
-    opacity: 0.4;
-    line-height: 100%;
-}
-.text {
-    grid-column: 4 / 9;
-}
+
 .textTitle {
     font-size: 24px;
     font-family: Manrope ExtraBold;
     line-height: 100%;
 }
-.textContent {
-    opacity: 0.8;
+.articleTitle {
     font-family: Manrope ExtraLight;
-    line-height: 180%;
+    font-size: 24px;
+    opacity: 0.4;
+    line-height: 100%;
 }
 .subtitle,
 .article {
     font-family: Manrope Regular;
 }
-.title, .subtitle {
-    grid-column: 3 / 11;
-}
 .title {
-    font-size: 52px;
     font-family: Monument Extended;
 }
 .subtitle {
@@ -51,80 +31,10 @@
     margin-bottom: 128px;
 }
 .illu {
-    margin: 256px 0;
     width: 100%;
     padding-bottom: 56.25%;
-    grid-column: 1 / 14;
     background-size: cover;
     background-position: center;
-    /*grid-column: 3 / 11;*/
-}
-.backButton {
-    grid-column: 3 / 11;
-    /*border: solid red 1px;*/
-    margin-bottom: 128px;
-    font-family: Manrope Regular;
-}
-.backButton a {
-    text-decoration: none;
-    color: white;
-}/*
-.backButton a::before {
-    background-image: url(../img/mdi_arrow_back.svg);
-    background-size: cover;
-    display: inline-block;
-    width: 16px; 
-    height: 16px;
-    content:"";
-    vertical-align: middle;
-    margin-right: 8px;
-}*/
-.title,
-.subtitle {
-    position: relative;
-}
-.title .text-wrapper,
-.subtitle .text-wrapper {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-}
-.title .letter,
-.subtitle .letter {
-    transform-origin: 0 100%;
-    display: inline-block;
-    line-height: auto;
-}
-.aze {
-    grid-column: 3 / 11;
-    font-family: Manrope Regular;
-    margin-top: 128px;
-    margin-bottom: 32px;
-}
-.links a {
-    display: inline-block;
-    position: relative;
-    padding-bottom: 4px;
-}
-.links a:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 1px;
-    left: 0;
-    position: absolute;
-    background: white;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-    -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    -ms-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-}
-.links a:hover:after { 
-    width: 100%; 
-    left: 0; 
 }
 .otherProjects {
     margin: 64px 0 128px 0;
@@ -142,7 +52,6 @@
 .otherProjects a:hover {
     opacity: 1;
 }
-
 #miiam1 {
     background-image: url(../img/miiam1.jpg);
 }
@@ -155,16 +64,212 @@
 #browsers1 {
     background-image: url(../img/Scene-4.jpg);
 }
-.progress-container {
-    width: 100%;
-    height: 2px;
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
+
+.textTitle {
+    font-size: 24px;
+    font-family: Manrope ExtraBold;
+    line-height: 100%;
 }
-.progress-bar {
-    height: 2px;
-    background: #fff;
-    width: 0%;
-} 
+.textContent {
+    opacity: 0.8;
+    font-family: Manrope ExtraLight;
+    line-height: 180%;
+}
+.title, .subtitle {
+    grid-column: 3 / 11;
+}
+.backButton {
+    font-family: Manrope Regular;
+}
+.backButton a {
+    text-decoration: none;
+    color: white;
+}
+.aze {
+    grid-column: 3 / 11;
+    font-family: Manrope Regular;
+    margin-top: 128px;
+    margin-bottom: 32px;
+}
+
+
+@media only screen and (min-width: 377px) {
+
+    /* DESKTOP */
+
+    #grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: 16px;
+    }
+    .article {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-column-gap: 16px;
+        grid-column: 3 / 11;
+    }
+    .articleTitle {
+        grid-column: 1 / 4;
+        font-size: 24px;
+        opacity: 0.4;
+        line-height: 100%;
+    }
+    .text {
+        grid-column: 4 / 9;
+    }
+    .illu {
+        grid-column: 1 / 14;
+        /*grid-column: 3 / 11;*/
+    }
+    .backButton {
+        grid-column: 3 / 11;
+        /*border: solid red 1px;*/
+        margin-bottom: 128px;
+    }
+    .backButton a {
+        text-decoration: none;
+        color: white;
+    }/*
+    .backButton a::before {
+        background-image: url(../img/mdi_arrow_back.svg);
+        background-size: cover;
+        display: inline-block;
+        width: 16px; 
+        height: 16px;
+        content:"";
+        vertical-align: middle;
+        margin-right: 8px;
+    }*/
+    .title,
+    .subtitle {
+        position: relative;
+    }
+    .title .text-wrapper,
+    .subtitle .text-wrapper {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+    }
+    .title .letter,
+    .subtitle .letter {
+        transform-origin: 0 100%;
+        display: inline-block;
+        line-height: auto;
+    }
+    
+    .links a {
+        display: inline-block;
+        position: relative;
+        padding-bottom: 4px;
+    }
+    .links a:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        background: white;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+        -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        -ms-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    }
+    .links a:hover:after { 
+        width: 100%; 
+        left: 0; 
+    }
+    .otherProjects {
+        margin: 64px 0 128px 0;
+        grid-column: 3 / 11;
+        display: flex;
+        flex-direction: column;
+    }
+    .otherProjects a {
+        margin-bottom: 32px;
+        font-size: 52px;
+        font-family: Monument Extended;
+        opacity: 0.2;
+        display: inline-block;
+    }
+    .otherProjects a:hover {
+        opacity: 1;
+    }
+    .progress-container {
+        width: 100%;
+        height: 2px;
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+    }
+    .progress-bar {
+        height: 2px;
+        background: #fff;
+        width: 0%;
+    }
+    .illu {
+        margin: 256px 0;
+        width: 100%;
+        padding-bottom: 56.25%;
+        background-size: cover;
+        background-position: center;
+    }
+    .title {
+        font-size: 52px;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    
+    /*  MOBILE */
+
+    .otherProjects {
+        margin: 64px 0 128px 0;
+        grid-column: 3 / 11;
+        display: flex;
+        flex-direction: column;
+    }
+    .otherProjects a {
+        margin-bottom: 32px;
+        font-size: 32px;
+        font-family: Monument Extended;
+        opacity: 0.2;
+        display: inline-block;
+    }
+    .otherProjects a:hover {
+        opacity: 1;
+    }
+    .backButton {
+        grid-column: 3 / 11;
+        /*border: solid red 1px;*/
+        margin-bottom: 64px;
+    }
+    .backButton a {
+        text-decoration: none;
+        color: white;
+    }
+    .subtitle {
+        font-size: 24px;
+        margin-bottom: 64px;
+    }
+    .articleTitle {
+        font-size: 16px;
+        opacity: 0.4;
+        line-height: 100%;
+        margin-bottom: 16px;
+    }
+    .illu {
+        margin: 64px 0;
+        width: 100%;
+        padding-bottom: 56.25%;
+        background-size: cover;
+        background-position: center;
+    }
+    .title {
+        font-size: 32px;
+    }
+}
