@@ -1,29 +1,202 @@
+@font-face {
+    font-family: 'Manrope Regular';
+    src: url(../fonts/Manrope-Regular.woff2);
+}
+@font-face {
+    font-family: 'Manrope ExtraBold';
+    src: url(../fonts/Manrope-ExtraBold.woff2);
+}
+@font-face {
+    font-family: 'Manrope ExtraLight';
+    src: url(../fonts/Manrope-ExtraLight.woff2);
+}
+@font-face {
+    font-family: 'Monument Extended';
+    src: url(../fonts/MonumentExtended-Regular.otf);
+}
+
+
+/* Paramètres globaux */
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    scrollbar-width: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    background: black;
+}
+
 #grid {
+    height: 100vh;
+}
+
+#grid,
+.article {
     display: grid;
     grid-column-gap: 16px;
 }
-.project-title {
+
+#project-grid {
+    display: grid;
+    grid-column-gap: 16px;
+}
+.links a {
+    margin-left: 32px;
+    align-self: center;
+}
+.links {
+    display: flex;
+    font-family: Manrope Regular;
+    text-decoration: none;
+}
+
+.project-title,
+.title,
+.otherProjects a {
     font-family: Monument Extended;
 }
 .project-subtitle {
     font-family: Manrope Regular;
 }
+
+.otherProjects a {
+    display: block;
+}
+
+/* Animation des liens */
+
+.links a,
+.backButton a,
+.media,
+.otherProjects a  {
+    /*display: inline-block;*/
+    position: relative;
+    padding-bottom: 4px;
+}
+.links a:after,
+.backButton a:after,
+.media:after,
+.otherProjects a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    background: white;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    -ms-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+.links a:hover:after,
+.backButton a:hover:after,
+.media:hover:after,
+.otherProjects a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+
+/* Header et footer */
+
+header {
+    background: linear-gradient(black, rgba(0, 0, 0, 0));
+    
+}
+footer {
+    background: linear-gradient( rgba(0, 0, 0, 0), black);
+    bottom: 0;
+}
+
+header, footer {
+    position: fixed;
+    width: 100%;
+    display: grid;
+    grid-column-gap: 16px;
+    height: 128px;
+    z-index: 5;
+}
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.logo {
+    height: 48px;
+    width: 48px;
+    align-self: center;
+    background-image: url(../img/logo.svg);
+}
+
+/* Animation des titres et sous-titres */
+
+#project, .project-title, .project-subtitle {
+    position: relative;
+}
+.project-title .text-wrapper,
+.project-subtitle .text-wrapper {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+.project-title .letter,
+.project-subtitle .letter {
+    transform-origin: 0 100%;
+    display: inline-block;
+    line-height: auto;
+}
+.project-title .text-wrapper {
+    padding-top: 16px;
+}
+
+/* Images */
+
+.illustration,
+.illu {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .illustration {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/image.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    padding-bottom: 56.25%;
+}
+
+.otherProjects a {
+    width: max-content;
 }
 
 @media only screen and (min-width: 377px) {
 
     /* DESKTOP */
 
+    header, footer {
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .headerContent {
+        grid-area: 1 / 2 / 2 / 12;
+        margin-top: 64px;
+    }
     #grid {
         height: 100vh;
         grid-template-rows: 1fr auto 1fr;
         grid-template-columns: repeat(12, 1fr);
+    }
+    #project-grid {
+        grid-template-rows: 1fr auto 1fr;
+        grid-template-columns: repeat(12, 1fr);
+        padding-top: 128px;
+        margin-bottom: 128px;
     }
     #container {
         grid-area: 2 / 4 / 2 / 10;
@@ -44,19 +217,44 @@
     .project-subtitle {
         font-size: 24px;
     }
-
-    
+    .illustration {
+        padding-bottom: 56.25%;
+    }
+   
 }
 
 @media only screen and (max-width: 376px) {
     
     /*  MOBILE */
 
+
+    /* Header & Footer */
+
+    header, footer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .headerContent {
+        grid-column: 1 / 5;
+        margin-bottom: 64px;
+        padding: 0 16px;
+    }
+    .otherProjects a,
+    .links a,
+    .backButton a {
+        text-decoration: underline;
+    }
     #grid {
         height: 100vh;
         grid-template-rows: 1fr auto 1fr;
         grid-template-columns: repeat(4, 1fr);
         margin: 0 16px;
+    }
+    #project-grid {
+        grid-template-rows: 1fr auto 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0 16px;
+        padding-top: 128px;
+        margin-bottom: 64px;
     }
     #container {
         grid-area: 2 / 1 / 2 / 5;
