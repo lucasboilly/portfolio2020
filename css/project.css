@@ -3,41 +3,55 @@
 .article {
     font-family: Manrope Regular;
 }
-
-
-#miiam1 {
+#p1i1 {
+    background-image: url(../img/Scene-4.jpg);
+}
+#p1i2 {
+    background-image: url(../img/ieseg2.jpg);
+}
+#p1i3 {
+    background-image: url(../img/ieseg3.jpg);
+}
+#p2i1 {
     background-image: url(../img/miiam1.jpg);
 }
-#miiam2 {
+#p2i2 {
     background-image: url(../img/miiam2.jpg);
 }
-#miiam3 {
+#p2i3 {
     background-image: url(../img/miiam3.jpg);
 }
-#browsers1 {
-    background-image: url(../img/Scene-4.jpg);
+#p3i1 {
+    background-image: url(../img/browsers1.jpg);
 }
 .textTitle {
     font-family: Manrope ExtraBold;
 }
-
 .aze {
     font-family: Manrope Regular;
+}
+.progress-container {
+    width: 100%;
+    height: 2px;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.progress-bar {
+    height: 2px;
+    background: #fff;
+    width: 0%;
 }
 
 @media only screen and (min-width: 377px) {
 
     /* DESKTOP */
 
-    #grid {
-        grid-template-columns: repeat(12, 1fr);
-        padding-top: 128px;
-        margin-bottom: 128px;
-        
-    }
     .article {
         grid-template-columns: repeat(8, 1fr);
         grid-column: 3 / 11;
+        margin-bottom: 256px;
     }
     .articleTitle {
         grid-column: 1 / 4;
@@ -51,26 +65,25 @@
     .illu {
         grid-column: 1 / 14;
         padding-bottom: 56.25%;
+        margin-bottom: 256px;
     }
     .backButton {
         grid-column: 3 / 11;
+        width: max-content;
+        height: max-content;
         margin-bottom: 128px;
     }
     .textTitle {
         font-size: 24px;
         line-height: 100%;
+        margin-bottom: 24px;
     }
     .articleTitle {
         font-size: 24px;
     }
     .subtitle {
         font-size: 24px;
-        margin-bottom: 128px;
-    }
-    
-    .otherProjects {
-        margin-top: 64px;
-        grid-column: 3 / 11;
+        margin-bottom: 256px;
     }
     .otherProjects a {
         margin-bottom: 32px;
@@ -84,58 +97,15 @@
     .textContent {
         line-height: 180%;
     }
-    .title, .subtitle {
+    .title, .subtitle, .otherProjects, .aze {
         grid-column: 3 / 11;
     }
     .aze {
-        grid-column: 3 / 11;
-        margin-top: 128px;
-        margin-bottom: 32px;
-    }
-    .title,
-    .subtitle {
-        position: relative;
-    }
-    .title .text-wrapper,
-    .subtitle .text-wrapper {
-        position: relative;
-        display: inline-block;
-        overflow: hidden;
-    }
-    .title .letter,
-    .subtitle .letter {
-        transform-origin: 0 100%;
-        display: inline-block;
-        line-height: auto;
-    }
-
-    .otherProjects {
-        grid-column: 3 / 11;
-    }
-    .otherProjects a {
-        margin-bottom: 32px;
-        font-size: 52px;
-    }
-    .progress-container {
-        width: 100%;
-        height: 2px;
-        z-index: 1;
-        position: fixed;
-        top: 0;
-        z-index: 1000;
-    }
-    .progress-bar {
-        height: 2px;
-        background: #fff;
-        width: 0%;
-    }
-    .illu {
-        margin: 256px 0;
+        margin-bottom: 64px;
     }
     .title {
         font-size: 52px;
     }
-    
 }
 
 @media only screen and (max-width: 376px) {
@@ -145,7 +115,6 @@
     p > a {
         text-decoration: underline;
     }
-
     #grid {
         grid-template-columns: repeat(4, 1fr);
         margin: 0 16px;
@@ -165,26 +134,32 @@
     .title {
         font-size: 32px;
     }
-    .subtitle,
-    .backButton {
+    .subtitle {
         margin-bottom: 64px;
+    }
+    .backButton {
+        margin-bottom: 32px;
     }
     .article {
         grid-template-columns: repeat(1, 5fr);
+        margin-bottom: 32px;
     }
     .articleTitle {
         font-size: 16px;
         opacity: 0.4;
+        margin-bottom: 8px;
     }
     .textTitle {
         font-size: 24px;
+        margin-bottom: 8px;
     }
     .illu {
-        margin: 32px 0 128px 0;
+        margin-bottom: 128px;
         padding-bottom: 100%;
     }
     .aze {
-        margin: 64px 0 32px 0;
+        margin-bottom: 32px;
+        margin-top: 128px;
     }
     .otherProjects a {
         margin-bottom: 32px;

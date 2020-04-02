@@ -15,7 +15,6 @@
     src: url(../fonts/MonumentExtended-Regular.otf);
 }
 
-
 /* Paramètres globaux */
 
 * {
@@ -30,17 +29,11 @@ a {
 body {
     background: black;
 }
-
 #grid {
     height: 100vh;
 }
-
 #grid,
-.article {
-    display: grid;
-    grid-column-gap: 16px;
-}
-
+.article,
 #project-grid {
     display: grid;
     grid-column-gap: 16px;
@@ -54,16 +47,15 @@ body {
     font-family: Manrope Regular;
     text-decoration: none;
 }
-
 .project-title,
-.title,
-.otherProjects a {
+.project-title,
+.otherProjects a,
+.title {
     font-family: Monument Extended;
 }
 .project-subtitle {
     font-family: Manrope Regular;
 }
-
 .otherProjects a {
     display: block;
 }
@@ -71,15 +63,18 @@ body {
 /* Animation des liens */
 
 .links a,
-.backButton a,
-.media,
+.backButton,
+.media {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 4px;
+}
 .otherProjects a  {
-    /*display: inline-block;*/
     position: relative;
     padding-bottom: 4px;
 }
 .links a:after,
-.backButton a:after,
+.backButton:after,
 .media:after,
 .otherProjects a:after {
     background: none repeat scroll 0 0 transparent;
@@ -98,7 +93,7 @@ body {
     -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
 }
 .links a:hover:after,
-.backButton a:hover:after,
+.backButton:hover:after,
 .media:hover:after,
 .otherProjects a:hover:after { 
     width: 100%; 
@@ -110,13 +105,11 @@ body {
 
 header {
     background: linear-gradient(black, rgba(0, 0, 0, 0));
-    
 }
 footer {
     background: linear-gradient( rgba(0, 0, 0, 0), black);
     bottom: 0;
 }
-
 header, footer {
     position: fixed;
     width: 100%;
@@ -130,7 +123,6 @@ header, footer {
     justify-content: space-between;
     align-content: center;
 }
-
 .logo {
     height: 48px;
     width: 48px;
@@ -171,7 +163,6 @@ header, footer {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/image.jpg);
     background-size: cover;
 }
-
 .otherProjects a {
     width: max-content;
 }
@@ -188,15 +179,14 @@ header, footer {
         margin-top: 64px;
     }
     #grid {
-        height: 100vh;
         grid-template-rows: 1fr auto 1fr;
         grid-template-columns: repeat(12, 1fr);
+        height: 100vh;
     }
     #project-grid {
-        grid-template-rows: 1fr auto 1fr;
         grid-template-columns: repeat(12, 1fr);
-        padding-top: 128px;
-        margin-bottom: 128px;
+        padding-top: 256px;
+        margin-bottom: 256px;
     }
     #container {
         grid-area: 2 / 4 / 2 / 10;
@@ -220,13 +210,11 @@ header, footer {
     .illustration {
         padding-bottom: 56.25%;
     }
-   
 }
 
 @media only screen and (max-width: 376px) {
     
     /*  MOBILE */
-
 
     /* Header & Footer */
 
@@ -240,7 +228,7 @@ header, footer {
     }
     .otherProjects a,
     .links a,
-    .backButton a {
+    .backButton {
         text-decoration: underline;
     }
     #grid {
@@ -250,11 +238,8 @@ header, footer {
         margin: 0 16px;
     }
     #project-grid {
-        grid-template-rows: 1fr auto 1fr;
-        grid-template-columns: repeat(4, 1fr);
         margin: 0 16px;
         padding-top: 128px;
-        margin-bottom: 64px;
     }
     #container {
         grid-area: 2 / 1 / 2 / 5;
@@ -263,11 +248,10 @@ header, footer {
         padding-bottom: 100%;
     }
     .project-title {
-        font-size: 24px;
+        font-size: 32px;
         margin-top: 32px;
     }
     .project-subtitle {
         font-size: 16px;
     }
-
 }
