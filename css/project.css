@@ -4,7 +4,7 @@
     font-family: Manrope Regular;
 }
 #p1i1 {
-    background-image: url(../img/Scene-4.jpg);
+    background-image: url(../img/ieseg1.jpg);
 }
 #p1i2 {
     background-image: url(../img/ieseg2.jpg);
@@ -24,8 +24,9 @@
 #p3i1 {
     background-image: url(../img/browsers1.jpg);
 }
-.textTitle {
-    font-family: Manrope ExtraBold;
+.textTitle,
+.articleTitle {
+    font-family: Manrope Bold;
 }
 .aze {
     font-family: Manrope Regular;
@@ -43,6 +44,9 @@
     background: #fff;
     width: 0%;
 }
+.articleTitle {
+    opacity: 0.2;
+}
 
 @media only screen and (min-width: 377px) {
 
@@ -56,7 +60,6 @@
     .articleTitle {
         grid-column: 1 / 4;
         font-size: 24px;
-        opacity: 0.4;
         line-height: 100%;
     }
     .text {
@@ -91,7 +94,7 @@
     }
     .textTitle {
         font-size: 24px;
-        font-family: Manrope ExtraBold;
+        font-family: Manrope Bold;
         line-height: 100%;
     }
     .textContent {
@@ -146,7 +149,6 @@
     }
     .articleTitle {
         font-size: 16px;
-        opacity: 0.4;
         margin-bottom: 8px;
     }
     .textTitle {

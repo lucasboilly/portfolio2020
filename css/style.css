@@ -3,12 +3,8 @@
     src: url(../fonts/Manrope-Regular.woff2);
 }
 @font-face {
-    font-family: 'Manrope ExtraBold';
-    src: url(../fonts/Manrope-ExtraBold.woff2);
-}
-@font-face {
-    font-family: 'Manrope ExtraLight';
-    src: url(../fonts/Manrope-ExtraLight.woff2);
+    font-family: 'Manrope Bold';
+    src: url(../fonts/Manrope-Bold.woff2);
 }
 @font-face {
     font-family: 'Monument Extended';
@@ -160,7 +156,18 @@ header, footer {
     background-repeat: no-repeat;
 }
 .illustration {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/image.jpg);
+    background-size: cover;
+}
+#illustration1 {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/ieseg1.jpg);
+    background-size: cover;
+}
+#illustration2 {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/miiam1.jpg);
+    background-size: cover;
+}
+#illustration3 {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/browsers1.jpg);
     background-size: cover;
 }
 .otherProjects a {
