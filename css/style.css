@@ -2,10 +2,12 @@
     font-family: 'Manrope Regular';
     src: url(../fonts/Manrope-Regular.woff2);
 }
+
 @font-face {
     font-family: 'Manrope Bold';
     src: url(../fonts/Manrope-Bold.woff2);
 }
+
 @font-face {
     font-family: 'Monument Extended';
     src: url(../fonts/MonumentExtended-Regular.otf);
@@ -19,39 +21,49 @@
     color: white;
     scrollbar-width: none;
 }
+
 a {
     text-decoration: none;
 }
+
 body {
     background: black;
 }
+
 #grid {
     height: 100vh;
 }
+
 #grid,
 .article,
 #project-grid {
     display: grid;
     grid-column-gap: 16px;
 }
+
 .links a {
     margin-left: 32px;
     align-self: center;
 }
+
 .links {
+    display: -webkit-box;
     display: flex;
     font-family: Manrope Regular;
     text-decoration: none;
 }
+
 .project-title,
 .project-title,
 .otherProjects a,
 .title {
     font-family: Monument Extended;
 }
+
 .project-subtitle {
     font-family: Manrope Regular;
 }
+
 .otherProjects a {
     display: block;
 }
@@ -65,10 +77,12 @@ body {
     position: relative;
     padding-bottom: 4px;
 }
-.otherProjects a  {
+
+.otherProjects a {
     position: relative;
     padding-bottom: 4px;
 }
+
 .links a:after,
 .backButton:after,
 .media:after,
@@ -88,25 +102,31 @@ body {
     -ms-transition: width 0.3s ease 0s, left 0.3s ease 0s;
     -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
 }
+
 .links a:hover:after,
 .backButton:hover:after,
 .media:hover:after,
-.otherProjects a:hover:after { 
-    width: 100%; 
-    left: 0; 
+.otherProjects a:hover:after {
+    width: 100%;
+    left: 0;
 }
 
 
 /* Header et footer */
 
 header {
+    background: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
     background: linear-gradient(black, rgba(0, 0, 0, 0));
 }
+
 footer {
-    background: linear-gradient( rgba(0, 0, 0, 0), black);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
+    background: linear-gradient(rgba(0, 0, 0, 0), black);
     bottom: 0;
 }
-header, footer {
+
+header,
+footer {
     position: fixed;
     width: 100%;
     display: grid;
@@ -114,11 +134,15 @@ header, footer {
     height: 128px;
     z-index: 5;
 }
+
 .headerContent {
+    display: -webkit-box;
     display: flex;
+    -webkit-box-pack: justify;
     justify-content: space-between;
     align-content: center;
 }
+
 .logo {
     height: 48px;
     width: 48px;
@@ -128,21 +152,27 @@ header, footer {
 
 /* Animation des titres et sous-titres */
 
-#project, .project-title, .project-subtitle {
+#project,
+.project-title,
+.project-subtitle {
     position: relative;
 }
+
 .project-title .text-wrapper,
 .project-subtitle .text-wrapper {
     position: relative;
     display: inline-block;
     overflow: hidden;
 }
+
 .project-title .letter,
 .project-subtitle .letter {
+    -webkit-transform-origin: 0 100%;
     transform-origin: 0 100%;
     display: inline-block;
     line-height: auto;
 }
+
 .project-title .text-wrapper {
     padding-top: 16px;
 }
@@ -155,22 +185,32 @@ header, footer {
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .illustration {
     background-size: cover;
 }
+
 #illustration1 {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0))), url(../img/ieseg1.jpg);
     background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/ieseg1.jpg);
     background-size: cover;
 }
+
 #illustration2 {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0))), url(../img/miiam1.jpg);
     background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/miiam1.jpg);
     background-size: cover;
 }
+
 #illustration3 {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0))), url(../img/browsers1.jpg);
     background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/browsers1.jpg);
     background-size: cover;
 }
+
 .otherProjects a {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
 }
 
@@ -178,26 +218,32 @@ header, footer {
 
     /* DESKTOP */
 
-    header, footer {
+    header,
+    footer {
         grid-template-columns: repeat(12, 1fr);
     }
+
     .headerContent {
         grid-area: 1 / 2 / 2 / 12;
         margin-top: 64px;
     }
+
     #grid {
         grid-template-rows: 1fr auto 1fr;
         grid-template-columns: repeat(12, 1fr);
         height: 100vh;
     }
+
     #project-grid {
         grid-template-columns: repeat(12, 1fr);
         padding-top: 256px;
         margin-bottom: 256px;
     }
+
     #container {
         grid-area: 2 / 4 / 2 / 10;
     }
+
     .infos {
         position: absolute;
         top: 50%;
@@ -208,56 +254,68 @@ header, footer {
         -ms-transform: translateY(-50%);
         -o-transform: translateY(-50%);
     }
+
     .project-title {
         font-size: 52px;
     }
+
     .project-subtitle {
         font-size: 24px;
     }
+
     .illustration {
         padding-bottom: 56.25%;
     }
 }
 
 @media only screen and (max-width: 376px) {
-    
+
     /*  MOBILE */
 
     /* Header & Footer */
 
-    header, footer {
+    header,
+    footer {
         grid-template-columns: repeat(4, 1fr);
     }
+
     .headerContent {
         grid-column: 1 / 5;
         margin-bottom: 64px;
         padding: 0 16px;
     }
+
     .otherProjects a,
     .links a,
     .backButton {
         text-decoration: underline;
     }
+
     #grid {
         height: 100vh;
         grid-template-rows: 1fr auto 1fr;
         grid-template-columns: repeat(4, 1fr);
         margin: 0 16px;
     }
+
     #project-grid {
         margin: 0 16px;
         padding-top: 128px;
     }
+
     #container {
         grid-area: 2 / 1 / 2 / 5;
     }
+
     .illustration {
         padding-bottom: 100%;
     }
+
     .project-title {
         font-size: 32px;
         margin-top: 32px;
     }
+
     .project-subtitle {
         font-size: 16px;
     }

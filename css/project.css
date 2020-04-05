@@ -3,34 +3,44 @@
 .article {
     font-family: Manrope Regular;
 }
+
 #p1i1 {
     background-image: url(../img/ieseg1.jpg);
 }
+
 #p1i2 {
     background-image: url(../img/ieseg2.jpg);
 }
+
 #p1i3 {
     background-image: url(../img/ieseg3.jpg);
 }
+
 #p2i1 {
     background-image: url(../img/miiam1.jpg);
 }
+
 #p2i2 {
     background-image: url(../img/miiam2.jpg);
 }
+
 #p2i3 {
     background-image: url(../img/miiam3.jpg);
 }
+
 #p3i1 {
     background-image: url(../img/browsers1.jpg);
 }
+
 .textTitle,
 .articleTitle {
     font-family: Manrope Bold;
 }
+
 .aze {
     font-family: Manrope Regular;
 }
+
 .progress-container {
     width: 100%;
     height: 2px;
@@ -39,13 +49,20 @@
     top: 0;
     z-index: 1000;
 }
+
 .progress-bar {
     height: 2px;
     background: #fff;
     width: 0%;
 }
+
 .articleTitle {
     opacity: 0.2;
+}
+
+.textContent {
+    line-height: 180%;
+    margin-bottom: 24px;
 }
 
 @media only screen and (min-width: 377px) {
@@ -57,72 +74,90 @@
         grid-column: 3 / 11;
         margin-bottom: 256px;
     }
+
     .articleTitle {
         grid-column: 1 / 4;
         font-size: 24px;
         line-height: 100%;
     }
+
     .text {
         grid-column: 4 / 9;
     }
+
     .illu {
         grid-column: 1 / 14;
         padding-bottom: 56.25%;
         margin-bottom: 256px;
     }
+
     .backButton {
         grid-column: 3 / 11;
+        width: -webkit-max-content;
+        width: -moz-max-content;
         width: max-content;
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
         margin-bottom: 128px;
     }
+
     .textTitle {
         font-size: 24px;
         line-height: 100%;
         margin-bottom: 24px;
     }
+
     .articleTitle {
         font-size: 24px;
     }
+
     .subtitle {
         font-size: 24px;
         margin-bottom: 256px;
     }
+
     .otherProjects a {
         margin-bottom: 32px;
         font-size: 52px;
     }
+
     .textTitle {
         font-size: 24px;
         font-family: Manrope Bold;
         line-height: 100%;
     }
-    .textContent {
-        line-height: 180%;
-    }
-    .title, .subtitle, .otherProjects, .aze {
+
+    .title,
+    .subtitle,
+    .otherProjects,
+    .aze {
         grid-column: 3 / 11;
     }
+
     .aze {
         margin-bottom: 64px;
     }
+
     .title {
         font-size: 52px;
     }
 }
 
 @media only screen and (max-width: 376px) {
-    
+
     /*  MOBILE */
 
-    p > a {
+    p>a {
         text-decoration: underline;
     }
+
     #grid {
         grid-template-columns: repeat(4, 1fr);
         margin: 0 16px;
         padding-top: 128px;
     }
+
     .backButton,
     .title,
     .subtitle,
@@ -134,35 +169,44 @@
     .otherProjects {
         grid-column: 1 / 5;
     }
+
     .title {
         font-size: 32px;
     }
+
     .subtitle {
         margin-bottom: 64px;
     }
+
     .backButton {
         margin-bottom: 32px;
     }
+
     .article {
         grid-template-columns: repeat(1, 5fr);
         margin-bottom: 32px;
     }
+
     .articleTitle {
         font-size: 16px;
         margin-bottom: 8px;
     }
+
     .textTitle {
         font-size: 24px;
-        margin-bottom: 8px;
+        margin-bottom: 24px;
     }
+
     .illu {
         margin-bottom: 128px;
         padding-bottom: 100%;
     }
+
     .aze {
         margin-bottom: 32px;
         margin-top: 128px;
     }
+
     .otherProjects a {
         margin-bottom: 32px;
         font-size: 32px;
