@@ -185,27 +185,30 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
 }
-
 .illustration {
     background-size: cover;
+    background-position: center;
 }
 
 #illustration1 {
     background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0))), url(../img/ieseg1.jpg);
     background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/ieseg1.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 #illustration2 {
     background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0))), url(../img/miiam1.jpg);
     background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/miiam1.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 #illustration3 {
     background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0))), url(../img/browsers1.jpg);
     background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/browsers1.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 .otherProjects a {
