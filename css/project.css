@@ -65,7 +65,7 @@
     margin-bottom: 24px;
 }
 
-@media only screen and (min-width: 377px) {
+@media only screen and (min-width: 415px) {
 
     /* DESKTOP */
 
@@ -144,7 +144,7 @@
     }
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 414px) {
 
     /*  MOBILE */
 
